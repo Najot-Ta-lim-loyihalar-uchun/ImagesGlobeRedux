@@ -4,7 +4,7 @@ import { AiOutlineLike } from "react-icons/ai";
 
 export const links = [
   {
-    to: "/home",
+    to: "/",
     name: "Home",
     icon: FaHome,
     color: "blue",

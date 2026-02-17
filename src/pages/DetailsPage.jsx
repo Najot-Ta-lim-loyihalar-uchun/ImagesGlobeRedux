@@ -18,6 +18,7 @@ function DetailsPage() {
   const { id } = useParams();
   const { images } = useSelector((state) => state.images);
   const currentImage = images.find((item) => item.id == id);
+
   if (!currentImage) {
     return <Navigate to={"*"} />;
   }

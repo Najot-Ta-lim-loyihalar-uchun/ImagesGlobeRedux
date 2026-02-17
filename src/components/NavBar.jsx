@@ -23,7 +23,7 @@ function NavBar() {
         <div className="flex gap-5">
           {links.map((link) => {
             let Icon = link.icon;
-            const isActive = location.pathname.includes(link.to);
+            const isActive = location.pathname === link.to;
 
             return (
               <Link
