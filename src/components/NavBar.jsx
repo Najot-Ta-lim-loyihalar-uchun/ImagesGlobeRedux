@@ -24,6 +24,7 @@ function NavBar() {
           {links.map((link) => {
             let Icon = link.icon;
             const isActive = location.pathname === link.to;
+            console.log(location.pathname);
 
             return (
               <Link

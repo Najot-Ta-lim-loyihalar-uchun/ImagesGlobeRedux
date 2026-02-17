@@ -82,7 +82,7 @@ function ImageBox({ item }) {
                backdrop-blur-md 
                shadow-md 
                flex items-center justify-center 
-               ${liked ? "opacity-100" : "opacity-0"}
+              opacity-0
                group-hover:opacity-100
                hover:text-blue-300
                transition-all duration-300
