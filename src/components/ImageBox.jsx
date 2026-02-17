@@ -9,6 +9,8 @@ import { likeImage, saveImage } from "../toolkit/features/images/imageSlice";
 import { Link } from "react-router-dom";
 
 function ImageBox({ item }) {
+  console.log(item);
+
   const { id, img, liked, downloaded } = item;
   const dispatch = useDispatch();
 
