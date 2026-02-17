@@ -10,13 +10,13 @@ export const links = [
     color: "blue",
   },
   {
-    to: "/downloads",
+    to: "downloads",
     name: "Downloads",
     icon: FaFileDownload,
     color: "green",
   },
   {
-    to: "/liked",
+    to: "liked",
     name: "Liked",
     icon: AiOutlineLike,
     color: "red",

@@ -1,5 +1,8 @@
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 
+// components
+import ImageBox from "./ImageBox";
+
 function ImageMasonry({ images, show }) {
   return (
     <ResponsiveMasonry
@@ -8,7 +11,7 @@ function ImageMasonry({ images, show }) {
     >
       <Masonry>
         {images &&
-          images.slice(0, show).map((item) => <img src={item.img} alt="" />)}
+          images.slice(0, show).map((item) => <ImageBox item={item} />)}
       </Masonry>
     </ResponsiveMasonry>
   );

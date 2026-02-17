@@ -10,12 +10,19 @@ export const imageSlice = createSlice({
   name: "images",
   initialState,
   reducers: {
-    deleteImage: (state, { payload }) => {
-      console.log(payload);
+    likeImage: (state, { payload }) => {
+      state.images = state.images.map((img) =>
+        img.id === payload ? { ...img, liked: !img.liked } : img,
+      );
+    },
+    saveImage: (state, { payload }) => {
+      state.images = state.images.map((img) =>
+        img.id === payload ? { ...img, downloaded: true } : img,
+      );
     },
   },
 });
 
-export const { deleteImage } = imageSlice.actions;
+export const { likeImage, saveImage } = imageSlice.actions;
 
 export default imageSlice.reducer;

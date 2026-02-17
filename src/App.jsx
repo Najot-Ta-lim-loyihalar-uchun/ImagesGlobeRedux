@@ -23,15 +23,15 @@ function App() {
           element: <ImagesPage />,
         },
         {
-          path: "/downloads",
+          path: "downloads",
           element: <DownloadsPage />,
         },
         {
-          path: "/liked",
+          path: "liked",
           element: <LikedImagespage />,
         },
         {
-          path: "/:id",
+          path: ":id",
           element: <DetailsPage />,
         },
         {

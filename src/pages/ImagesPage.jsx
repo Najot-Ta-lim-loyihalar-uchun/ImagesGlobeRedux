@@ -1,8 +1,7 @@
 import { useState } from "react";
 
 /* redux tools */
-import { useSelector, useDispatch } from "react-redux";
-import { deleteImage } from "../toolkit/features/images/imageSlice";
+import { useSelector } from "react-redux";
 
 /* Components */
 import ImageMasonry from "../components/ImageMasonry";
