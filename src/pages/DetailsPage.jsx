@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, Navigate, useParams } from "react-router-dom";
 
 /* redux  */
 import { useSelector, useDispatch } from "react-redux";
@@ -16,8 +16,12 @@ import {
 function DetailsPage() {
   const dispatch = useDispatch();
   const { id } = useParams();
-  const { images } = useSelector((state) => state.images || []);
+  const { images } = useSelector((state) => state.images);
   const currentImage = images.find((item) => item.id == id);
+  if (!currentImage) {
+    return <Navigate to={"*"} />;
+  }
+
   const { img, liked, downloaded } = currentImage;
 
   return (
