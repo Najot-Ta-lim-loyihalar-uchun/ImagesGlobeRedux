@@ -13,7 +13,7 @@ function NavBar() {
   return (
     <nav className="bg-gray-100 fixed top-0 w-full">
       <div className="container py-[25px] flex items-center justify-between">
-        <Link to={"/"} className="flex items-end gap-3">
+        <Link to={"/home"} className="flex items-end gap-3">
           <MdImageSearch className="text-6xl text-blue-500" />
 
           <h2 className="text-3xl font-bold text-gray-800 tracking-tight">
@@ -23,7 +23,7 @@ function NavBar() {
         <div className="flex gap-5">
           {links.map((link) => {
             let Icon = link.icon;
-            const isActive = location.pathname === link.to;
+            const isActive = location.pathname.includes(link.to);
 
             return (
               <Link
